@@ -9,8 +9,6 @@ const currentPriceEl = document.getElementById('current-price')
 const maxPriceEl = document.getElementById('max-price')
 const minPriceEl = document.getElementById('min-price')
 const time = document.getElementById('time')
-const now = new Date()
-const timeType = now.getHours() < 12 ? 'AM' : 'PM'
 
 async function getData(url) {
     const response = await fetch(url)
@@ -54,8 +52,11 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 })
 .catch(err => console.log(err))
 
+const timeNow = new Intl.DateTimeFormat("en-us", {
+    timeStyle: "short",
+  })
 
-time.innerText = now.getHours()%12 + ':' + now.getMinutes() + ':' + now.getSeconds() + ' ' + timeType
+time.innerText = timeNow.format(Date.now())
 
 
 adjustStyle()
