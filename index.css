@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 25px 25px 25px;
+
+    background: center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 12px #474747;
+    overflow: hidden;
+}
+main {
+    height: 100vh;
+    flex-direction: column;
+}
+h1.time {
+    text-align: center;
+    margin-bottom: auto;
+}
+p#author  {
+    padding-bottom: 40px;;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.crypto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: auto;
+    margin-top: 0.5em;
+}
+p {
+    font-size: 1.3rem;
+    padding: 0 0 0 0.5em;
+}
